@@ -8,6 +8,7 @@ export const globalErrorHandler = (
 ) => {
   res.status(500).json({
     success: false,
+    status: 500,
     message: err.message || "Something went wrong",
     error: err,
   });
