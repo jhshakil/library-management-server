@@ -1,9 +1,9 @@
 import { Book } from "@prisma/client";
 import { prisma } from "../../utils/prisma";
 
-const createBook = async (payload: Book) => {
+const createBook = async (data: Book) => {
   const result = await prisma.book.create({
-    data: payload,
+    data,
   });
 
   return result;
