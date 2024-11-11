@@ -36,12 +36,11 @@ const overdueBorrow = async () => {
 
   const overdueRecords = result
     .filter((item) => {
-      return CompareTodayDate(item.borrowDate) > 14; // Filter items where differenceInDays is greater than 14
+      return CompareTodayDate(item.borrowDate) > 14;
     })
     .map((item) => {
       const daysBeyond14 = CompareTodayDate(item.borrowDate) - 14;
 
-      // Return the desired data format
       return {
         borrowId: item.borrowId,
         bookTitle: item.book.title,
