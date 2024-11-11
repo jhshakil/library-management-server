@@ -4,7 +4,8 @@
   "scripts": {
     "dev": "tsnd --respawn src/server.ts",
     "prod": "NODE_ENV=production node ./dist/server.js",
-    "build": "tsc"
+    "build": "tsc",
+    "postinstall": "prisma generate"
   },
   "devDependencies": {
     "@types/cors": "^2",
